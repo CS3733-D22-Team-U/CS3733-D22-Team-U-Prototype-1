@@ -1,24 +1,2 @@
 ID,Name,Amount,Type,Destination,Date,Time,Priority
-330,Bone Saw,0,Equipment,lab1,2022-04-04,23:10:44,1
-7057,Gloves,32,Equipment,lab1,2022-04-04,23:12:44,1
-6318,First Aid Kit,744,Equipment,lab1,2022-04-04,23:13:37,1
-2964,Syringe,75,Equipment,lab1,2022-04-04,23:13:37,1
-5678,Catheter,876,Equipment,lab1,2022-04-04,23:13:37,1
-8257,Dresing,876,Equipment,lab1,2022-04-04,23:13:37,1
-8755,Body Bag,678,Equipment,lab1,2022-04-04,23:13:37,1
-7224,Oxygen Mask,54,Equipment,lab1,2022-04-04,23:13:37,1
-3353,Bone Saw,78,Equipment,lab1,2022-04-04,23:13:37,1
-2216,Sethoscope,45,Equipment,lab1,2022-04-04,23:13:37,1
-513,Masks,78,Equipment,lab1,2022-04-04,23:13:37,1
-1280,Gloves,32,Equipment,lab1,2022-04-04,23:13:37,1
-5900,Lollipop,78,Equipment,lab1,2022-04-04,23:13:37,1
-5592,Oximeter,743,Equipment,lab1,2022-04-04,23:13:37,1
-4740,Glucometer,766,Equipment,lab1,2022-04-04,23:13:37,1
-3837,Large Intestine,78,Equipment,lab1,2022-04-04,23:13:37,1
-6880,Nebulaizer,78,Equipment,lab1,2022-04-04,23:13:37,1
-9369,Ventilator,76,Equipment,lab1,2022-04-04,23:13:37,1
-1012,First Aid Kit,1254,Equipment,lab1,2022-04-04,23:33:26,1
-8150,First Aid Kit,76,Equipment,lab1,2022-04-04,23:36:55,1
-1994,First Aid Kit,15,Equipment,100,2022-04-04,23:40:37,1
-1432,Syringe,23,Equipment,asdas,2022-04-04,23:40:37,1
-5312,First Aid Kit,45,Equipment,5,2022-04-04,23:43:43,1
+9610,Syringe,2,Equipment,8,2022-04-10,16:19:15,1

@@ -192,6 +192,17 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </Button>
+                  <Button alignment="CENTER" lineSpacing="5.0" mnemonicParsing="false" onAction="#toSideView" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Side View" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
                     </children>
                 </VBox>
             </children>
