@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733.D22.teamU.frontEnd.controllers.giftFloralHelpController">
+   <children>
+      <Pane prefHeight="95.0" prefWidth="1101.0" style="-fx-background-color: #044e9a;">
+         <children>
+            <Text fill="WHITE" layoutX="290.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mass General Brigham">
+               <font>
+                  <Font size="54.0" />
+               </font></Text>
+            <ImageView fitHeight="95.0" fitWidth="125.0" layoutX="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/hospitalIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pane" layoutY="-1.0" prefHeight="741.0" prefWidth="1100.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="300.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/selectGift.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fieldsGift.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="300.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/nameGift.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="300.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/giftMessage.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="505.0" layoutY="664.0" mnemonicParsing="false" onAction="#toGiftAndFloral" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: #89D7BF #89D7BF; -fx-background-radius: 15;" text="Return" />
+            <Text layoutX="300.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requesting a gift or floral service">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="300.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert full name of sender and full name of receiver" />
+            <Text layoutX="300.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert the room number of the receiver and the staff member assigned the task." />
+            <Text layoutX="300.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the item(s) you would like to send" />
+            <Text layoutX="300.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Optional) Insert a gift message for the receiver to receive" />
+            <Text layoutX="300.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click &quot;OK&quot; to submit the form or click &quot;Clear&quot; to clear all fields" />
+            <Text layoutX="300.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Request ID will autofill." />
+            <Circle fill="#029ca6" layoutX="260.0" layoutY="202.0" radius="12.0" stroke="#029ca6" strokeType="INSIDE" />
+            <Circle fill="#029ca6" layoutX="260.0" layoutY="280.0" radius="12.0" stroke="#029ca6" strokeType="INSIDE" />
+            <Circle fill="#029ca6" layoutX="260.0" layoutY="401.0" radius="12.0" stroke="#029ca6" strokeType="INSIDE" />
+            <Circle fill="#029ca6" layoutX="260.0" layoutY="507.0" radius="12.0" stroke="#029ca6" strokeType="INSIDE" />
+            <Circle fill="#029ca6" layoutX="260.0" layoutY="615.0" radius="12.0" stroke="#029ca6" strokeType="INSIDE" />
+            <Text fill="WHITE" layoutX="257.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+            <Text fill="WHITE" layoutX="256.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+            <Text fill="WHITE" layoutX="256.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+            <Text fill="WHITE" layoutX="256.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+            <Text fill="WHITE" layoutX="256.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+         </children></Pane>
+   </children>
+</AnchorPane>
