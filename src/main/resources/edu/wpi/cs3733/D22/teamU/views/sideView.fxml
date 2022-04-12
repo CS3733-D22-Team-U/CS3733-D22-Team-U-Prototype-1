@@ -17,7 +17,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #0449a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733.D22.teamU.frontEnd.controllers.sideViewController">
    <children>
       <Pane prefHeight="95.0" prefWidth="1101.0" style="-fx-background-color: #044e9a;">
@@ -37,7 +36,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="pane" layoutX="1.0" prefHeight="200.0" prefWidth="200.0">
+      <Pane fx:id="pane" layoutY="-1.0" prefHeight="741.0" prefWidth="1100.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b0e5e3" height="564.0" layoutX="743.0" layoutY="146.0" stroke="#b0e5e3" strokeType="INSIDE" width="345.0" />
             <ImageView fitHeight="594.0" fitWidth="354.0" layoutX="362.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
@@ -58,23 +57,22 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b25656" height="32.0" layoutX="538.0" layoutY="318.0" stroke="WHITE" strokeType="INSIDE" width="17.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b25656" height="32.0" layoutX="538.0" layoutY="235.0" stroke="WHITE" strokeType="INSIDE" width="17.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b25656" height="32.0" layoutX="537.0" layoutY="161.0" stroke="WHITE" strokeType="INSIDE" width="17.0" />
-            <SplitMenuButton layoutX="760.0" layoutY="158.0" mnemonicParsing="false" text="Select a Floor">
+            <SplitMenuButton layoutX="760.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Choose a Floor">
               <items>
-                <MenuItem mnemonicParsing="false" text="LL2" />
-                <MenuItem mnemonicParsing="false" text="LL1" />
-                  <MenuItem mnemonicParsing="false" text="L1" />
-                  <MenuItem mnemonicParsing="false" text="L2" />
-                  <MenuItem mnemonicParsing="false" text="L3" />
-                  <MenuItem mnemonicParsing="false" text="L4" />
-                  <MenuItem mnemonicParsing="false" text="L5" />
+                <MenuItem fx:id="lower2" mnemonicParsing="false" onAction="#lower" text="LL2" />
+                <MenuItem fx:id="lower1" mnemonicParsing="false" onAction="#lower" text="LL1" />
+                  <MenuItem fx:id="level1" mnemonicParsing="false" onAction="#lower" text="L1" />
+                  <MenuItem fx:id="level2" mnemonicParsing="false" onAction="#lower" text="L2" />
+                  <MenuItem fx:id="level3" mnemonicParsing="false" onAction="#lower" text="L3" />
+                  <MenuItem fx:id="level4" mnemonicParsing="false" onAction="#lower" text="L4" />
+                  <MenuItem fx:id="level5" mnemonicParsing="false" onAction="#lower" text="L5" />
               </items>
             </SplitMenuButton>
             <TableView layoutX="760.0" layoutY="200.0" prefHeight="499.0" prefWidth="317.0">
               <columns>
-                <TableColumn prefWidth="64.84466552734375" text="Location" />
-                <TableColumn prefWidth="90.7412109375" text="Location Type" />
-                  <TableColumn prefWidth="86.32763671875" text="Equipment" />
-                  <TableColumn prefWidth="72.79168701171875" text="Status" />
+                <TableColumn fx:id="location" prefWidth="64.84466552734375" text="Location" />
+                <TableColumn fx:id="locationType" prefWidth="90.7412109375" text="Location Type" />
+                  <TableColumn fx:id="equipmentName" prefWidth="160.0" text="Equipment" />
               </columns>
             </TableView>
             <Text fill="#044e9a" layoutX="306.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LL1">
@@ -112,13 +110,13 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Text>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="618.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="534.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="454.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="370.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="289.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="201.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="121.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLower2" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="618.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLower1" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="534.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLevel1" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="454.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLevel2" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="370.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLevel3" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="289.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLevel4" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="201.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
+            <Rectangle fx:id="recLevel5" arcHeight="5.0" arcWidth="5.0" fill="#029ca659" height="92.0" layoutX="357.0" layoutY="121.0" stroke="#029ca6" strokeType="INSIDE" strokeWidth="8.0" visible="false" width="364.0" />
             <Text layoutX="790.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOOSE A FLOOR TO VIEW CONTENTS OF">
                <font>
                   <Font name="System Italic" size="13.0" />
@@ -126,86 +124,113 @@
             </Text>
          </children>
       </Pane>
-      <JFXHamburger alignment="BOTTOM_LEFT" layoutX="25.0" layoutY="120.0" prefHeight="534.0" prefWidth="24.0">
+      <JFXHamburger fx:id="hamburger" alignment="BOTTOM_LEFT" layoutX="24.0" layoutY="141.0" prefHeight="534.0" prefWidth="24.0">
          <children>
-            <VBox prefHeight="462.0" prefWidth="232.0">
+            <VBox fx:id="vBoxPane" prefHeight="462.0" prefWidth="232.0" visible="false">
                <children>
-                  <Button fx:id="home" lineSpacing="5.0" mnemonicParsing="false" onAction="#toHome" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Home" textFill="WHITE" visible="false">
+                  <Button fx:id="home" lineSpacing="5.0" mnemonicParsing="false" onAction="#toHome" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Home" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button fx:id="home2" lineSpacing="5.0" mnemonicParsing="false" onAction="#toEquipmentDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Equipment Request" textFill="WHITE" visible="false">
+                  <Button fx:id="home2" lineSpacing="5.0" mnemonicParsing="false" onAction="#toEquipmentDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Equipment Request" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="19.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toLabRequest" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Lab Request" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toLabRequest" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Lab Request" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMedicineDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Medicine Delivery" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMedicineDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Medicine Delivery" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="20.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMap" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Map" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMap" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Map" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMealDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Meal Delivery" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toMealDelivery" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Meal Delivery" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toGiftAndFloral" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Gift &amp; Floral" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toGiftAndFloral" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Gift &amp; Floral" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toLaundry" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Laundry" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toLaundry" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Laundry" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="26.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toSideView" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Side View" textFill="WHITE" visible="false">
+                  <Button lineSpacing="5.0" mnemonicParsing="false" onAction="#toSideView" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #89D7BF;" text="Side View" textFill="WHITE">
                      <font>
                         <Font size="26.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
                </children>
             </VBox>
          </children>
       </JFXHamburger>
-      <Pane fx:id="assistPane" layoutY="209.0" prefHeight="541.0" prefWidth="93.0" />
+      <Pane fx:id="assistPane" layoutX="11.0" layoutY="212.0" prefHeight="541.0" prefWidth="93.0" />
    </children>
 </AnchorPane>

@@ -98,6 +98,7 @@
                 </CheckBox>
             <Text layoutX="9.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request ID" />
             <TextField fx:id="requestID" layoutX="87.0" layoutY="253.0" />
+            <Button layoutX="220.0" layoutY="577.0" mnemonicParsing="false" onAction="#toHelp" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: #89D7BF; -fx-background-radius: 15;" text="Help" />
             </children>
         </Pane>
         <JFXHamburger fx:id="hamburger" alignment="BOTTOM_LEFT" layoutX="24.0" layoutY="141.0" prefHeight="534.0" prefWidth="24.0">
@@ -192,7 +193,7 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </Button>
-                  <Button alignment="CENTER" lineSpacing="5.0" mnemonicParsing="false" onAction="#toSideView" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Side View" textFill="WHITE">
+                  <Button fx:id="sideViewButton" alignment="CENTER" lineSpacing="5.0" mnemonicParsing="false" onAction="#toSideView" prefHeight="56.0" prefWidth="190.0" style="-fx-border-radius: 15px; -fx-background-radius: 15; -fx-background-color: #044e9a;" text="Side View" textFill="WHITE">
                      <font>
                         <Font size="26.0" />
                      </font>
